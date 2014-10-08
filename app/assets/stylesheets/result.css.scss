@@ -1,0 +1,57 @@
+/* Overwrite */
+.content-head {border: 0px !important;padding-bottom: 23px !important}
+
+/* Tabs */
+.tabs {clear: both; border-bottom: 1px solid #e3e3e3;margin-top: 6px;}
+.tabs a {float: right;display: inline;background: asset-url("all.png") 0 0 no-repeat;line-height: 300px;overflow: hidden;margin-bottom: -6px;_position:relative;}
+.tabs a.chart {width: 74px;height: 35px;background-position: 0 -301px;}
+.tabs .selected a.chart/*, .tabs a.chart:hover*/{background-position: 0 -339px;}
+.tabs a.pie {width: 74px;height: 35px;background-position: -84px -301px;margin-left: 10px;}
+.tabs .selected a.pie/*, .tabs a.pie:hover*/ {background-position: -84px -339px;}
+.tabs a.histogram {background: asset-url("histogram.png") 0 0 no-repeat}
+.tabs .selected a.histogram {background-position: -86px 0;}
+.tabs a.analysis {width: 120px;height: 40px;background-position: 0 -404px; margin-bottom: -11px;}
+.tabs a.blank {width: 10px;height: 35px;background: #fff;cursor: default;}
+.tabs a.analysis-opened {background-position: 1px -446px;background-color: #f6f6f6;}
+
+/* Analysis wrap */
+.analysis-pie-wrap {background: #f6f6f6 asset-url("analysis_bg.png") 0 0 repeat-y;margin: 10px 0 22px 0;}
+.analysis-pie-wrap .analysis-pie-tabs {width: 80px;float: left;padding: 10px;}
+.analysis-pie-wrap .analysis-pie-area {width: 628px;float: right;padding: 10px 25px;}
+.analysis-pie-wrap .analysis-pie-tabs li {line-height: 36px;font-size: 16px;color: #6c6c6c;padding-left: 25px;cursor: pointer;}
+.analysis-pie-wrap .analysis-pie-tabs li.selected {background:asset-url("all.png") -285px -256px no-repeat;color: #f29149;}
+.analysis-pie-wrap .analysis-pie-flash-tip{text-align: right;font-size: 14px;}
+
+/* Item */
+.item {padding: 4px 0 35px 55px;margin-top: 0px !important;}
+.item dt {line-height: 26px;padding: 4px 0;}
+
+/* Chart */
+.item li {line-height: 18px;}
+.item li .options {padding: 8px 0;}
+.item .options, .item .bars, .item .counter {float: left;display: inline;}
+.item .options {width: 280px;}
+.item .bars {width: 210px;margin-left: 20px;}
+.item .bar{width: 150px;height: 14px;overflow: hidden;background-color: #e3e3e3;float: left;display:inline;margin: 10px 0;margin-right: 10px;}
+.item .precent {background-color: #f29149;border-right: 1px solid #fff;height: 14px;width: 0%;}
+.item .data {height: 34px;line-height: 34px;}
+.item .counter {padding: 8px 0;font-family: "Arial","Microsoft Yahei","寰蒋闆呴粦";text-align: right;margin-left: 40px;width: 100px;}
+
+
+/* Pie */
+.item .pie-area{padding-top: 10px;}
+.item .options-area {width: 280px;float: left;display: inline;}
+.item .options-area li {line-height: 18px;padding: 8px 0;}
+.item .with-options .pie-area {float: right;padding:10px 65px 0 0;}
+
+
+/* Content foot */
+.content-foot {clear: both;color: #6c6c6c;font-size: 14px;padding:10px 0 36px 0;}
+.content-foot .status {float: left;}
+.content-foot .operations {float: right;width: 125px;display: inline;margin-right: 95px;}
+.content-foot .operations li {float: left;display: inline;padding-right: 20px;background: asset-url("all.png") -262px -221px no-repeat;}
+.content-foot a:link, .content-foot a:visited {color: #6c6c6c}
+.content-foot a:hover, .content-foot a:active, .content-foot a:focus{color: #f29149}
+/* Modified 0903 */
+.content-foot .share {float: right;display: inline;margin-right: 100px;}
+/* ./Modified 0903 */

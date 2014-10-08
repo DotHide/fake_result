@@ -1,0 +1,24 @@
+<div class="row text-center hacked">
+	<h2>给李婷加油</h2>
+	<hr>
+	<p>当前票数：<%= @result.count %>票</p>
+	<br>
+	<%= simple_form_for @result do |f| %>
+		<div class="form-actions">
+			<%= f.input :count, as: 'hidden' %>
+			<%= f.submit '+50', :disable_with => '提交中...', :class => 'btn btn-default', :onclick => 'add_count(50)' %>
+			<%= f.submit '+100', :disable_with => '提交中...', :class => 'btn btn-default', :onclick => 'add_count(100)' %>
+			<%= f.submit '+500', :disable_with => '提交中...', :class => 'btn btn-default', :onclick => 'add_count(500)' %>
+			<br><br>
+			<%= f.submit '+1000', :disable_with => '提交中...', :class => 'btn btn-primary', :onclick => 'add_count(100)' %>
+			<%= f.submit '+2000', :disable_with => '提交中...', :class => 'btn btn-warning', :onclick => 'add_count(2000)' %>
+			<%= f.submit '+5000', :disable_with => '提交中...', :class => 'btn btn-danger', :onclick => 'add_count(5000)' %>
+		</div>
+	<% end %>
+</div>
+<script type="text/javascript">
+	function add_count (count) {
+		var result_count = $('#result_count');
+		result_count.val(count)
+	}
+</script>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2014smg播音主持新秀候选人名单</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+<script type="text/javascript">
+    /**
+     * 全局数据
+     * video_url 视频链接
+     * channel 频道
+     * newsid 新闻id
+     * group 默认为0
+     */
+    var ARTICLE_DATA = {
+        //评论微博转发视频地址
+        video_url:'',
+        //评论微博转发图片地址，可置空会自动取图
+        pic_url:'',
+        //频道
+        channel:'survey',
+        //新闻id
+        newsid:'survey_group_102938',
+        //组，默认为0
+        group:1,
+        //微博转发参数
+        source: '',
+        sourceUrl: '',
+        uid: '',
+        commonFaces:{},
+        autoLogin:1,
+        cmntFix:0,
+        channelId: 0,
+        //1滚动到底部自动加载，0点击更多加载
+        scrollLoad:0,
+        width:950,
+        // inputWidth:65,
+        sharePopDirection:'top',
+        // 高清图在切换过程中，评论参数修改
+        customNewsId:'',
+        customShareUrl:'http://survey.news.sina.com.cn/survey.php?id=102938&dpc=1',
+        scrollLoad:true,
+        customImgUrl:''
+      };
+</script>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<script language='javascript' charset='utf-8' src='http://i.sso.sina.com.cn/js/ssologin.js'></script>
+<script type="text/javascript" src="http://i.sso.sina.com.cn/js/user_panel.js" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+<script type="text/javascript" src="http://survey.news.sina.com.cn/js/build/survey.syn.js?haaha"></script>
+<script type="text/javascript">
+    // jsLoader
+    eval(function(p,a,c,k,e,r){e=function(c){return(c<62?'':e(parseInt(c/62)))+((c=c%62)>35?String.fromCharCode(c+29):c.toString(36))};if('0'.replace(0,e)==0){while(c--)r[e(c)]=k[c];k=[function(e){return r[e]||e}];e=function(){return'[4-9abfgj-vx-zA-R]'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(9(){b w=g,d=document,u=\'1.1.0\',7={},j=0,cbkLen=0;5(w.k){5(w.k.u>=u){o};7=w.k.K();j=7.j};b addEvent=9(x,B,C){5(x.L){x.L("on"+B,C)}m{x.addEventListener(B,C,false)}};9 M(a,D,s){b l=d.createElement("script");l.type="text/javascript";5(s){l.s=s};l.N=l.y=9(){5(!g.E||g.E=="loaded"||g.E=="complete"){5(D){D()};l.N=l.y=null;l.parentNode.removeChild(l)}};l.src=a;b h=d.getElementsByTagName("head")[0];h.insertBefore(l,h.firstChild)};b v=9(4,a){g.4=4;g.a=a;g.6=[]};v.prototype={f:\'O\',y:9(){g.f=\'F\';b z=[];P(b i=0;i<g.6.j;i++){5(n g.6[i]==\'9\'){try{g.6[i]()}catch(e){z.A(e)}}};g.6=[];5(z.j!=0){throw z[0]}}};b k=9(q,t){b 8={};5(p.j==3){8.4=p[0];8.a=p[1];8.6=p[2]}m 5(n q===\'Q\'){8.a=q;5(n t===\'9\'){8.6=t}}m{8=q};b a=8.a||"",4=8.4||"",6=8.6||"",s=8.s||"";b r={4:4,k:9(q,t){b agms=p;b 8={};5(p.j==3){8.4=p[0];8.a=p[1];8.6=p[2]}m 5(n q===\'Q\'){8.a=q;5(n t===\'9\'){8.6=t}}m{8=q};5(!8.4){8.4=\'R\'+j;j++};b c=k({4:g.4,6:9(){k(8)}});c.4=8.4;o c}};5(4){5(!7[4]){5(!a){7[4]=G v(4);7[4].f=\'H\'}m{7[4]=G v(4,a)};j++}m 5(7[4].f==\'H\'&&a){7[4].f=\'O\'};5(8.f){7[4].f=8.f};5(7[4].f==\'I\'||7[4].f==\'H\'){5(n 6==\'9\'){7[4].6.A(6)};o r}m 5(7[4].f==\'F\'){5(n 6==\'9\'){6()};o r}}m{5(!a){o r};P(b J in 7){5(7[J].a==a){4=J;break}};5(!4){4=\'R\'+j;7[4]=G v(4,a);j++};r.4=4;5(7[4].f==\'I\'){5(n 6==\'9\'){7[4].6.A(6)};o r}m 5(7[4].f==\'F\'){5(n 6==\'9\'){6()};o r}};5(n 6==\'9\'){7[4].6.A(6)};M(a,9(){7[4].y()},s);7[4].f=\'I\';o r};w.k=k;w.k.u=u;w.k.K=9(){o 7}})();',[],54,'||||name|if|callback|data|cfg|function|url|var||||status|this|||length|jsLoader|scriptNode|else|typeof|return|arguments|op|chain|charset|fn|version|JsObj||obj|onload|errors|push|eventType|func|dispose|readyState|ok|new|waiting|loading|item|getData|attachEvent|getScript|onreadystatechange|init|for|string|noname'.split('|'),0,{}))
+</script>
+<script type="text/javascript">
+    window.bShare.addEntry({
+        title: '',
+        url: 'http://survey.news.sina.com.cn/survey.php?id=102938',
+        summary: '欢迎参与新浪调查《2014smg播音主持新秀候选人名单》（@微调查)'
+    });
+
+</script>
+<!-- ./Share -->
+<script type="text/javascript">
+    $CONFIG = {
+        sid : 102938,
+        NeedLogin : true
+    }
+    $FILE_PATH = {
+        CORE : '../assets/survey.asy.result.js'
+    }
+</script>
+<script type="text/javascript">
+    jsLoader($FILE_PATH.CORE);
+</script>
+
+
+<!-- SUDA_CODE_START -->
+<script type="text/javascript" src="http://www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+<script type="text/javascript" >
+//<!--
+_S_pSt("");
+//-->
+</script>
+<noScript>
+<div style='position:absolute;top:0;left:0;width:0;height:0;visibility:hidden'><img width=0 height=0 src='http://beacon.sina.com.cn/a.gif?noScript' border='0' alt='' /></div>
+</noScript>
+<!-- SUDA_CODE_END -->
+</html>

@@ -1,0 +1,257 @@
+<!-- Header -->
+<div class="header">
+  <div class="top-nav center clearfix">
+    <div class="logo">
+      <a href="/list.php?dpc=1" target="_blank">
+        新浪调查
+      </a>
+    </div>
+    <div class="caps-nav">
+      <a href="http://survey.ent.sina.com.cn/list.php?dpc=1" target="_blank">
+        调查首页
+      </a>
+      <a href="http://ent.sina.com.cn" target="_blank">
+        新浪娱乐
+      </a>
+      <a href="http://www.sina.com.cn" target="_blank">
+        新浪首页
+      </a>
+      <a href="http://news.sina.com.cn/guide/" target="_blank" class="no-bg no-pr">
+        新浪导航
+      </a>
+    </div>
+    <div class="login-frame">
+      <a href="javascript:;" class="login-button" id="JS_Login_Btn">
+        登录
+      </a>
+      <div class="logined-wrap" id="JS_Logined_Wrap">
+      </div>
+      <div id="JS_Login_Layer" style="display:none">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ./Header -->
+<!-- Main -->
+<div class="main center">
+  <div class="main-content">
+    <div class="watermark">
+    </div>
+    <!-- Content head -->
+    <div class="content-head">
+      <h2>
+        2014smg播音主持新秀候选人名单
+      </h2>
+      <div class="handler clearfix">
+        <div class="source">
+          来源：
+          <a href="http://ent.sina.com.cn" target="_blank" class="cf29">
+            新浪娱乐
+          </a>
+        </div>
+        <div class="joiner">
+          创建时间：2014年09月22日
+        </div>
+        <div class="status">
+          状态：进行中
+        </div>
+        <div class="joiner">
+          参与人数：439,834
+        </div>
+        <div class="view-result  no-bg no-pr">
+          <a href="http://survey.ent.sina.com.cn/survey.php?id=102938&dpc=1" target="_blank" class="cf29">
+            我要投票
+          </a>
+        </div>
+      </div>
+      <div class="tabs clearfix">
+        <a href="javascript:;" class="analysis" action-type="toggle-analysis"
+        id="JS_Analysis_Trigger">
+          用户分析
+        </a>
+        <a href="javascript:;" class="blank">
+        </a>
+        <span class="" id="JS_Tab_02" action-type="hide-analysis">
+          <a href="javascript:;" class="pie">
+            饼图
+          </a>
+        </span>
+        <span class="" id="JS_Tab_01" action-type="hide-analysis">
+          <a href="javascript:;" class="chart">
+            表格
+          </a>
+        </span>
+      </div>
+      <div class="analysis-pie-wrap clearfix" style="display:none" id="JS_Analysis_Target">
+        <div class="analysis-pie-tabs">
+          <ul>
+            <li class="selected" id="JS_Analysis_Tab01">
+              按时间
+            </li>
+          </ul>
+        </div>
+        <div class="analysis-pie-area" id="JS_Analysis_Cont01">
+          <div class="analysis-pie-flash" id="JS_Analysis_Flash_01">
+          </div>
+          <div class="analysis-pie-flash-tip" id="JS_Analysis_Flash_Tip_01">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./Content head -->
+    <!-- Content body -->
+    <!-- Chart -->
+    <div class="content-body" id="JS_Content_01">
+      <dl class="item">
+        <dt>
+          2014smg播音主持新秀候选人名单
+        </dt>
+        <dd class="clearfix">
+          <ol>
+            <% list_all_with_percent.each do |result| %>
+              <li class="clearfix">
+                <div class="options">
+                  <%= result[:name] %>
+                </div>
+                <div class="bars">
+                  <div class="bar">
+                    <div class="precent" precent="<%= result[:percent] %>"></div>
+                  </div>
+                  <div class="data cf29">
+                    <%= result[:percent] %>
+                  </div>
+                </div>
+                <div class="counter">
+                  <%= result[:count] %>票
+                </div>
+              </li>
+            <% end %>
+          </ol>
+        </dd>
+      </dl>
+    </div>
+    <!-- ./Chart -->
+    <!-- Share -->
+<script type="text/javascript" src="http://survey.news.sina.com.cn/js/build/jquery-1.10.2.min.js">
+</script>
+<script type="text/javascript" src="http://www.sinaimg.cn/dy/fusioncharts/v3_2_1/FusionCharts.js">
+</script>
+<!-- Pie -->
+<div class="content-body" id="JS_Content_02">
+  <dl class="item">
+    <dt>
+      <!--<i>1.</i>-->
+      2014smg播音主持新秀候选人名单
+    </dt>
+    <dd class="with-options clearfix">
+      <ul class="options-area">
+        <li>
+          1. 王黎欢(电视)
+        </li>
+        <li>
+          2. 王兆阳(电视)
+        </li>
+        <li>
+          3. 李婷(电视)
+        </li>
+        <li>
+          4. 庄宁宇(电视)
+        </li>
+        <li>
+          5. 慰笛(电视)
+        </li>
+        <li>
+          6. 百克力(电视)
+        </li>
+        <li>
+          7. 榕榕(广播)
+        </li>
+        <li>
+          8. 陈婷(电视)
+        </li>
+        <li>
+          9. 路易(电视)
+        </li>
+        <li>
+          10. 杨乐(电视)
+        </li>
+        <li>
+          11. 晨光(广播)
+        </li>
+        <li>
+          12. 杨永清(广播)
+        </li>
+        <li>
+          13. 培怡(广播)
+        </li>
+      </ul>
+      <div class="pie-area" id="JS_Pie_0">
+      </div>
+    </dd>
+  </dl>
+  <script type="text/javascript">
+    // Chart pie drawing
+    var myChart_bing_0 = new FusionCharts("http://www.sinaimg.cn/dy/fusioncharts/v3_2_1/Pie3D.swf?PBarLoadingText=Loading&XMLLoadingText=Loading&ParsingDataText=Loading", "myChartId_bing_", " 730", "250", "0", "0");
+    myChart_bing_0.setTransparent(1);
+    myChart_bing_0.setDataXML("<chart baseFontSize='12' numberSuffix='%' showAboutMenuItem='0' decimals='2' chartTopMargin='0' chartBottomMargin='0' caption='' showValues='0' formatNumberScale='0' bgAlpha='0' startingAngle='60'><set label='1' value='11.0' displayValue='王黎欢(电视) (11.0%)' toolText=' (11.0%)' isSliced='1' /><set label='2' value='10.0' displayValue='王兆阳(电视) (10.0%)' toolText=' (10.0%)'/><set label='3' value='8.8' displayValue='李婷(电视) (8.8%)' toolText=' (8.8%)'/><set label='4' value='8.7' displayValue='庄宁宇(电视) (8.7%)' toolText=' (8.7%)'/><set label='5' value='8.7' displayValue='慰笛(电视) (8.7%)' toolText=' (8.7%)'/><set label='6' value='8.5' displayValue='百克力(电视) (8.5%)' toolText=' (8.5%)'/><set label='7' value='8.4' displayValue='榕榕(广播) (8.4%)' toolText=' (8.4%)'/><set label='8' value='8.3' displayValue='陈婷(电视) (8.3%)' toolText=' (8.3%)'/><set label='9' value='6.7' displayValue='路易(电视) (6.7%)' toolText=' (6.7%)'/><set label='10' value='6.6' displayValue='杨乐(电视) (6.6%)' toolText=' (6.6%)'/><set label='11' value='14.3' displayValue='其他选项 (14.3%)' toolText=' (14.3%)'/></chart>");
+    myChart_bing_0.render("JS_Pie_0");
+  </script>
+</div>
+<!-- ./Pie -->
+<!-- ./Content body -->
+<!-- Content foot -->
+<iframe name="for_download" style="display:none" src="about:blank">
+</iframe>
+<div class="content-foot clearfix">
+  <!--votestate:1-->
+  <div class="status">
+    状态：进行中&nbsp;&nbsp;当前时间：2014-10-07 14:47:06
+  </div>
+  <div class="share">
+    <span style="float:left;padding-right:5px;">
+      分享到
+    </span>
+    <div style="float:left;overflow:hidden;height:18px;" class="bshare-custom">
+      <div class="bsPromo bsPromo2">
+      </div>
+      <a href="javascript:void(0);" class="bshare-sinaminiblog" title="分享到新浪微博">
+      </a>
+      <a class="bshare-more bshare-more-icon more-style-addthis" title="更多平台">
+      </a>
+    </div>
+  </div>
+  <div class="operations">
+    <ul class="clearfix">
+      <li>
+        <a href="javascript:;" action-type="refresh">
+          刷新
+        </a>
+      </li>
+      <li>
+        <a href="/print.php?pid=102938&dpc=1" target="_self">
+          打印
+        </a>
+      </li>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- ./Content foot -->
+</div>
+<!-- Commnet -->
+<div id="J_Comment_Wrap" class="blkContainerCommentblk">
+  请稍候，评论加载中...
+</div>
+<!-- ./Comment -->
+</div>
+<!-- ./Main -->
+<!-- Footer -->
+<div class="footer-wrap">
+    <div class="footer center">
+        <p><a target="_blank" href="http://ent.sina.com.cn/guest.html">新浪娱乐意见反馈留言板</a>&#12288;电话：010-62647003&#12288;&#12288;欢迎批评指正</p>
+        <p><a href="http://corp.sina.com.cn/chn/">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/">About Sina</a> | <a href="http://ads.sina.com.cn/">广告服务</a> | <a href="http://www.sina.com.cn/contactus.html">联系我们</a> | <a href="http://corp.sina.com.cn/chn/sina_job.html">招聘信息</a> | <a href="http://www.sina.com.cn/intro/lawfirm.shtml">网站律师</a> | <a href="http://english.sina.com">SINA English</a> | <a href="https://login.sina.com.cn/cgi/register/reg_sso.php">会员注册</a> | <a href="http://tech.sina.com.cn/focus/sinahelp.shtml">产品答疑</a></p>
+        <p>Copyright &copy; 1996-2013 SINA Corporation, All Rights Reserved</p>
+        <p>新浪公司 <a href="http://www.sina.com.cn/intro/copyright.shtml">版权所有</a></p>
+    </div>
+</div>
+<!-- ./Footer -->
