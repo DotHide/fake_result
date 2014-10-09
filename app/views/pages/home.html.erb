@@ -115,10 +115,10 @@
                 </div>
                 <div class="bars">
                   <div class="bar">
-                    <div class="precent" precent="<%= result[:percent] %>"></div>
+                    <div class="precent" precent="<%= result[:percent] %>%"></div>
                   </div>
                   <div class="data cf29">
-                    <%= result[:percent] %>
+                    <%= result[:percent] %>%
                   </div>
                 </div>
                 <div class="counter">
@@ -145,45 +145,9 @@
     </dt>
     <dd class="with-options clearfix">
       <ul class="options-area">
-        <li>
-          1. 王黎欢(电视)
-        </li>
-        <li>
-          2. 王兆阳(电视)
-        </li>
-        <li>
-          3. 李婷(电视)
-        </li>
-        <li>
-          4. 庄宁宇(电视)
-        </li>
-        <li>
-          5. 慰笛(电视)
-        </li>
-        <li>
-          6. 百克力(电视)
-        </li>
-        <li>
-          7. 榕榕(广播)
-        </li>
-        <li>
-          8. 陈婷(电视)
-        </li>
-        <li>
-          9. 路易(电视)
-        </li>
-        <li>
-          10. 杨乐(电视)
-        </li>
-        <li>
-          11. 晨光(广播)
-        </li>
-        <li>
-          12. 杨永清(广播)
-        </li>
-        <li>
-          13. 培怡(广播)
-        </li>
+        <% list_all_with_percent.each_with_index do |result, index| %>
+          <li><%= "#{index+1}. #{result[:name]}" %></li>
+        <% end %>
       </ul>
       <div class="pie-area" id="JS_Pie_0">
       </div>
@@ -193,7 +157,12 @@
     // Chart pie drawing
     var myChart_bing_0 = new FusionCharts("http://www.sinaimg.cn/dy/fusioncharts/v3_2_1/Pie3D.swf?PBarLoadingText=Loading&XMLLoadingText=Loading&ParsingDataText=Loading", "myChartId_bing_", " 730", "250", "0", "0");
     myChart_bing_0.setTransparent(1);
-    myChart_bing_0.setDataXML("<chart baseFontSize='12' numberSuffix='%' showAboutMenuItem='0' decimals='2' chartTopMargin='0' chartBottomMargin='0' caption='' showValues='0' formatNumberScale='0' bgAlpha='0' startingAngle='60'><set label='1' value='11.0' displayValue='王黎欢(电视) (11.0%)' toolText=' (11.0%)' isSliced='1' /><set label='2' value='10.0' displayValue='王兆阳(电视) (10.0%)' toolText=' (10.0%)'/><set label='3' value='8.8' displayValue='李婷(电视) (8.8%)' toolText=' (8.8%)'/><set label='4' value='8.7' displayValue='庄宁宇(电视) (8.7%)' toolText=' (8.7%)'/><set label='5' value='8.7' displayValue='慰笛(电视) (8.7%)' toolText=' (8.7%)'/><set label='6' value='8.5' displayValue='百克力(电视) (8.5%)' toolText=' (8.5%)'/><set label='7' value='8.4' displayValue='榕榕(广播) (8.4%)' toolText=' (8.4%)'/><set label='8' value='8.3' displayValue='陈婷(电视) (8.3%)' toolText=' (8.3%)'/><set label='9' value='6.7' displayValue='路易(电视) (6.7%)' toolText=' (6.7%)'/><set label='10' value='6.6' displayValue='杨乐(电视) (6.6%)' toolText=' (6.6%)'/><set label='11' value='14.3' displayValue='其他选项 (14.3%)' toolText=' (14.3%)'/></chart>");
+    var xml_data = "<chart baseFontSize='12' numberSuffix='%' showAboutMenuItem='0' decimals='2' chartTopMargin='0' chartBottomMargin='0' caption='' showValues='0' formatNumberScale='0' bgAlpha='0' startingAngle='60'>";
+    <% list_all_with_percent_top10.each_with_index do |result, index| %>
+        xml_data += "<%= "<set label='#{index+1}' value='#{result[:percent]}' displayValue='#{result[:name]} (#{result[:percent]}%)' toolText=' (#{result[:percent]}%)'/>".html_safe.to_s %>";
+    <% end %>
+    xml_data += "</chart>";
+    myChart_bing_0.setDataXML(xml_data);
     myChart_bing_0.render("JS_Pie_0");
   </script>
 </div>
@@ -205,7 +174,7 @@
 <div class="content-foot clearfix">
   <!--votestate:1-->
   <div class="status">
-    状态：进行中&nbsp;&nbsp;当前时间：2014-10-07 14:47:06
+    状态：进行中&nbsp;&nbsp;当前时间：<%= DateTime.current.to_s(:db) %>  
   </div>
   <div class="share">
     <span style="float:left;padding-right:5px;">

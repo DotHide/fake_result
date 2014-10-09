@@ -65,10 +65,6 @@ task :deploy => :environment do
   end
 end
 
-desc "Restart Server"
-task :restart do
-  queue 'sudo /etc/init.d/unicorn.fake_result restart'
-end
 
 # For help in making your deploy script, see the Mina documentation:
 #
