@@ -31,4 +31,9 @@ module ApplicationHelper
 		@results_percent << {name: '其他选项', count: 0, percent: number_with_precision((Float(others_total_count) / total_count) * 100, precision: 1)}
 		@results_percent
 	end
+
+	def member_count
+		total_count = Result.sum(:count)
+		@member_count = number_with_delimiter(total_count * 60 / 100)
+	end
 end

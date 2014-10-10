@@ -1,0 +1,14 @@
+<div id="results" class="row text-center hacked">
+	<h3><%= image_tag 'sina_logo.gif', class: 'sina_logo' %>刷你没商量</h3>
+	<hr>
+	<div class="row center-block" style="width: 500px;">
+		<table class="table table-striped">
+			<% @results.each do |result| %>
+				<tr>
+					<td>给<%= result.title %>加油</td>
+					<td><%= link_to 'GO!', edit_result_path(result), class: 'btn btn-default' %></td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+</div>

@@ -12,4 +12,8 @@ class ResultController < ApplicationController
   		redirect_to home_path
   	end
   end
+
+  def index
+    @results = Result.all
+  end
 end

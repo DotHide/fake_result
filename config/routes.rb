@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'results/:id/edit' => 'result#edit'
+  get 'results/:id/edit' => 'result#edit', as: 'edit_result'
   patch 'results/:id' => 'result#update', as: 'result'
+
+  get 'results' => 'result#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
